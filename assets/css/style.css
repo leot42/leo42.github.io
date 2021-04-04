@@ -1,9 +1,22 @@
+:root {
+    --silver-white: #fafafa;
+    --sky-blue: #c7eeff;
+    --lake-blue: #0077c0;
+    --dingy-black: #1d242b;
+    /* https://colorhunt.co/palette/38962 */
+}
 html {
     scroll-behavior: smooth;
 }
 
 .main-head {
     grid-area: header;
+    text-align: center;
+    background: var(--dingy-black);
+    text-align: center;
+    font-size: 35px;
+    color:var(--sky-blue);
+    padding: 60px;
 }
 .content {
     grid-area: content;
