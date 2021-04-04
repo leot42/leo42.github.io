@@ -20,3 +20,15 @@ html {
 .main-footer {
     grid-area: footer;
 }
+/* Mobile Layout */
+.wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "content"
+        "sidebar"
+        "extra"
+        "footer";
+}
