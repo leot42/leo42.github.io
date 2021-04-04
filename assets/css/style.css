@@ -2,12 +2,21 @@ html {
     scroll-behavior: smooth;
 }
 
-#page {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-areas: "about"
-                         "work"
-                         ""
-    ;
+.main-head {
+    grid-area: header;
+}
+.content {
+    grid-area: content;
+}
+.main-nav {
+    grid-area: nav;
+}
+.side {
+    grid-area: sidebar;
+}
+.extra {
+    grid-area: extra;
+}
+.main-footer {
+    grid-area: footer;
 }
