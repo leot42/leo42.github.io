@@ -20,7 +20,7 @@ html {
 .main-footer {
     grid-area: footer;
 }
-/* Mobile Layout */
+/* Mobile Layout  <500px*/
 .wrapper {
     display: grid;
     gap: 20px;
@@ -31,4 +31,19 @@ html {
         "sidebar"
         "extra"
         "footer";
+}
+/* Mobil >500px */
+@media (min-width: 500px) {
+    .wrapper {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+            "header  header"
+            "nav     nav"
+            "sidebar content"
+            "extra   footer";
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
 }
