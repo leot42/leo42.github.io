@@ -46,6 +46,7 @@ body {
   /* Add some padding inside the card container */
   .container {
     padding: 2px 16px;
+    max-height: 180px;
   }
 .main-nav {
     grid-area: nav;
@@ -69,12 +70,29 @@ body {
 }
 .main-footer {
     background: var(--sky-blue);
+    text-align: center;
     grid-area: footer;
     display: flex;
     flex-direction: row;
     
     justify-content: space-between;
 }
+.footer-content-right {
+    padding-right:40px;
+    margin-top:20px;
+    float:right;
+  }
+  
+  .icon-style {
+    height:40px;
+    margin-left:20px;
+    margin-top:5px;
+  }
+  
+  .icon-style:hover {
+    background-color:yellow;
+    padding:5px;
+  }
 /* Mobile Layout  <500px*/
 .wrapper {
     display: grid;
