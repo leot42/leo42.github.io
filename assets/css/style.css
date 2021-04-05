@@ -9,7 +9,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: var(--sky-blue);
+    background: var(--silver-white);
 }
 
 .main-head {
@@ -37,7 +37,7 @@ body {
     background-color: var(--lake-blue);;
     overflow: hidden;
 }
-.main-nav>a {
+.main-nav a {
     /* float: left; */
     display: block;
     color: #f2f2f2;
@@ -53,8 +53,12 @@ body {
     grid-area: extra;
 }
 .main-footer {
+    background: var(--sky-blue);
     grid-area: footer;
-}
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;}
 /* Mobile Layout  <500px*/
 .wrapper {
     display: grid;
@@ -87,12 +91,16 @@ body {
     .wrapper {
         grid-template-columns: 1fr 4fr 1fr;
         grid-template-areas: 
-        "header header  header"
-        "nav    content sidebar"
-        "nav    content extra"
-        "footer footer  footer";
+        "header  header  header"
+        "nav     nav     nav        "
+        "sidebar content extra"
+        "sidebar content extra"
+        "footer footer   footer";
     }
     nav ul {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
     }
 }
