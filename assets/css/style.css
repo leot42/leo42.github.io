@@ -29,18 +29,19 @@ body {
     display: grid;
     /* gap: 20px; */
     max-height: 200px;
-    /* grid-template-columns: ; */
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    /* grid-template-rows: 2fr 1fr; */
-    /* grid-template-areas: 
-    "item-1 item-1 item-2"
-    "item-1 item-1 item-3"
-    "item-4 item-5 item-6"; */
+    min-width: 400px;
+    margin: 15px 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    /* justify-content: center; */
 }
 .about {
     grid-area: about;
     grid-template-rows: 2fr;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    /* margin: 0, 10, 0, 10; */
 }
 .cards {
     /* display: grid; */
@@ -107,7 +108,8 @@ body {
     background: var(--sky-blue);
     /* display: grid; */
     display: flex;
-    margin-right: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
     text-align: center;
     grid-area: footer;
     flex-direction: row;
@@ -117,8 +119,8 @@ body {
     /* padding-right: 250px; */
 }
 .footer-content-right {
-    padding-right:40px;
-    margin-top:20px;
+    margin-right:20px;
+    /* margin-top:20px; */
     /* float:right; */
   }
   
@@ -139,11 +141,12 @@ body {
 /* Mobile Layout  <500px*/
 .wrapper {
     display: grid;
-    /* gap: 20px; */
+    grid-template-columns: 2fr;
+        grid-template-rows: 2fr 2fr 8fr 1fr 1fr 020px;
+        /* gap: 20px; */
     grid-template-areas: 
         "header"
         "nav"
-        "content"
         "content"
         "sidebar"
         "extra"
@@ -152,13 +155,18 @@ body {
 /* Mobile atleast 500px*/
 @media (min-width: 500px) {
     .wrapper {
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 2fr 2fr ;
+        grid-template-rows: auto 1fr 2fr 2fr 1fr;
         grid-template-areas: 
         "nav     nav"
         "header  header"
-        "sidebar content"
-        "sidebar content"
-        "extra   footer";
+        "content content"
+        "content content"
+        "footer   footer";
+    }
+    .portfolio {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
     }
     nav ul {
         display: flex;
