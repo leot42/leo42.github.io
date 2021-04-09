@@ -11,6 +11,7 @@ html {
 }
 body {
     background: var(--silver-white);
+    margin: 0 0 0 0;
 }
 
 .main-head {
@@ -112,8 +113,8 @@ body {
     padding-left: 10px;
     text-align: center;
     grid-area: footer;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: right;
 }
 .main-nav a {
     /* padding-right: 250px; */
@@ -138,7 +139,7 @@ body {
     max-height: 50%;
     max-width: 50%;
 }
-/* Mobile Layout  <500px*/
+/* Mobile Layout  screen < 500px*/
 .wrapper {
     display: grid;
     grid-template-columns: 2fr;
@@ -152,7 +153,7 @@ body {
         "extra"
         "footer";
 }
-/* Mobile atleast 500px*/
+/* Mobile screen >= 500px*/
 @media (min-width: 500px) {
     .wrapper {
         grid-template-columns: 2fr 2fr ;
@@ -177,7 +178,7 @@ body {
 @media (min-width: 700px) {
     .wrapper {
         grid-template-columns: 1fr 4fr 1fr;
-        grid-template-rows: 1fr 2fr 9fr 020px;
+        grid-template-rows: 1fr 2fr 14fr 020px;
         grid-template-areas: 
         "nav     nav     nav   "
         "header  header  header"
@@ -189,5 +190,10 @@ body {
         flex-direction: row;
         display: flex;
         justify-content: space-between;
+    }
+        .main-footer {
+        flex-direction: row;
+        font-size: smaller;
+        justify-content: center;
     }
 }
